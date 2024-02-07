@@ -3,7 +3,7 @@ import { cartItems } from "../../cartItems";
 
 const initialState = {
     cartItems: cartItems,
-    amount: 0,
+    amount: 4,
     total: 0
 };
 
@@ -13,4 +13,5 @@ const cartSlice = createSlice({
     reducers: {}
 });
 
-export default cartSlice.reducer; // reducersではないので注意
+export default cartSlice.reducer;
+// .reducerはcreateSlice()の値を元に生成されるreduce関数のこと。reducers:{}のことではないので注意
