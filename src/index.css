@@ -202,7 +202,9 @@ Cart
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  font-size: larger;
 }
+
 .clear-btn,
 .confirm-btn {
   background: transparent;

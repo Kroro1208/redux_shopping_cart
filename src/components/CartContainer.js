@@ -30,7 +30,7 @@ function CartContainer() {
             <footer>
                 <hr />
                 <div className='cart-total'>
-                    <h4>現在の合計は<span>{total}円です</span></h4>
+                    <h4>小計{amount}個の商品 (税込) :<span>{total}円です</span></h4>
                     <button className='btn clear-btn' onClick={() => dispatch(clearCart())}>全ての商品の選択解除</button>
                 </div>
             </footer>
