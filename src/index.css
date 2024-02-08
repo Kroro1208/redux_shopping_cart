@@ -209,12 +209,20 @@ Cart
 .confirm-btn {
   background: transparent;
   padding: 0.5rem 1rem;
-  color: red;
-  border: 3px solid red;
   margin-top: 2.25rem;
   border-radius: 20px;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* ホバー時の影を強調 */
 }
+.clear-btn {
+  color: red;
+  border: 3px solid red;
+}
+
+.confirm-btn {
+  color: var(--color-primary);
+  border: 3px solid var(--color-primary);
+}
+
 .clear-btn:hover {
   background: var(--color-red-light);
   color: var(--color-red-dark);
@@ -223,9 +231,13 @@ Cart
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* ホバー時の影を強調 */
   color: white;
 }
-.confirm-btn {
-  border-color: var(--color-primary);
+.confirm-btn:hover {
+  background: var(--color-primary);
   color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: scale(1.2); /* ホバー時に少し拡大 */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* ホバー時の影を強調 */
+  color: white;
 }
 
 /*
