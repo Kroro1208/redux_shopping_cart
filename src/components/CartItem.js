@@ -3,7 +3,7 @@ import { MinusIcon, PlusIcon, DeleteIcon } from '../HeroIcons';
 import { useDispatch } from 'react-redux';
 import { removeItem, increase, decrease } from '../features/cart/CartSlice';
 
-const CartItem = ({ id, img, title, price, amount }) => {
+const CartItem = ({ id, img, title, price, amount }) => { // このCartItem内の値がaction.値でアクセス可能
     const dispatch = useDispatch();
     return (
         <article className='cart-item'>

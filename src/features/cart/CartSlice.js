@@ -11,24 +11,31 @@ const cartSlice = createSlice({
     name: 'cart', // このname, initialState,reducersは決まっている
     initialState,
     reducers: { // reducerでどういう処理をしたいかを実装する
-        clearCart: (state) => {
-            return { cartItems: [], amount: 0, total: 0 };
+        clearCart: (state) => { // immerの不変性により下記のように記載できる
+            state.cartItems = [];
+            state.amount = 0;
+            state.total = 0;
         },
+
         removeItem: (state, action) => {
             const itemId = action.payload;
             state.cartItems = state.cartItems.filter((item) => item.id !== itemId);
-            console.log(action.payload);
         },
+
         increase: (state, action) => {
             const cartItem = state.cartItems.find((item => item.id === action.payload));
-            cartItem.amount = cartItem.amount + 1;
+            if (cartItem) {
+                cartItem.amount += 1;
+            }
         },
+
         decrease: (state, action) => {
             const cartItem = state.cartItems.find((item => item.id === action.payload));
-            if (cartItem.amount > 0) {
+            if (cartItem && cartItem.amount > 1) {
                 cartItem.amount -= 1;
             } // 0以下にならないように設定
         },
+
         calculateTotals: (state) => {
             let amount = 0;
             let total = 0;
