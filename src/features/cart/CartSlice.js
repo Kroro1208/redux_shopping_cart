@@ -26,8 +26,8 @@ const cartSlice = createSlice({
         decrease: (state, action) => {
             const cartItem = state.cartItems.find((item => item.id === action.payload));
             if (cartItem.amount > 0) {
-                cartItem.amount = cartItem.amount - 1;
-            }; // 0以下にならないように設定
+                cartItem.amount -= 1;
+            } // 0以下にならないように設定
         },
     }
 });
