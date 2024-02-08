@@ -1,8 +1,10 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import CartItem from './CartItem'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import CartItem from './CartItem';
+import { clearCart } from '../features/cart/CartSlice';
 
 function CartContainer() {
+    const dispatch = useDispatch();
     const { amount, cartItems, total } = useSelector((state) => state.cart)
     if (amount < 1) {
         return (
@@ -29,7 +31,7 @@ function CartContainer() {
                 <hr />
                 <div className='cart-total'>
                     <h4>現在の合計は<span>{total}円です</span></h4>
-                    <button className='btn clear-btn'>全削除</button>
+                    <button className='btn clear-btn' onClick={() => dispatch(clearCart())}>全削除</button>
                 </div>
             </footer>
         </section>
