@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import CartItem from './CartItem';
 import { clearCart } from '../features/cart/CartSlice';
+import { openModal } from '../features/modal/ModalSlice';
 
 function CartContainer() {
     const dispatch = useDispatch();
@@ -31,7 +32,7 @@ function CartContainer() {
                 <hr />
                 <div className='cart-total'>
                     <h4>小計{amount}個の商品 (税込) :<span>{total}円です</span></h4>
-                    <button className='btn clear-btn' onClick={() => dispatch(clearCart())}>全ての商品の選択解除</button>
+                    <button className='btn clear-btn' onClick={() => dispatch(openModal())}>全ての商品の選択解除</button>
                 </div>
             </footer>
         </section>
