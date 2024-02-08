@@ -1,4 +1,5 @@
 ![Reduxの概念](public/riadAin.gif)
+![UI](public/UI.jpg)
 
 # Redux を使ってショッピングカートアプリを作成
 
