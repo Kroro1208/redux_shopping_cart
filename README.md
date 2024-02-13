@@ -1,4 +1,4 @@
-![UI](public/UI.jpg)
+![UI](public/README用3.gif)
 ![UI](public/UI2.jpg)
 ![Reduxの仕組み](public/riadAin.gif)
 ![store&slice](public/slice.png)
